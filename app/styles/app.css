@@ -1,0 +1,352 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+
+html,body{
+  height:100%;
+  background-color:#3DB7B9;
+}
+
+/* Design editor page */
+
+.editorPage{
+  width:100%;
+  height:100%;
+}
+
+.editorPage>h1{
+  padding:3% 5%;
+  color:#212D37;
+}
+
+#editorjs{
+  background-color:aliceblue;
+  width:80%;
+  height:70%;
+  border-radius:8px;
+  margin:auto;
+  overflow-y: scroll;
+}
+
+
+.saveBtn:active,.SignUpBtn:active,.signInBtn:active,.createBtn:active,.showBtn:active,.logOutBtn:active{
+  transform: scale(0.9);
+}
+
+
+/* Design signUpPage */
+
+.signUpPage,.signInPage{
+  width:50%;
+  margin:auto;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  border-radius: 10px;
+  background-color: aliceblue;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.signUpPage h1{
+  text-align: center;
+  margin:3% 0 1%;
+  font-size: 2.2em;
+  color:#212D37;
+  font-family: 'Secular One', sans-serif;
+}
+
+.signInPage h1{
+  text-align: center;
+  margin:5% 0 3%;
+  color:#212D37;
+  font-family: 'Secular One', sans-serif;
+}
+
+.signUpPage h3,.signInPage h3{
+  text-align: center;
+  margin:1% 0 5%;
+  color:#212D37;
+}
+
+.signUpPage section,.signInPage section{
+  width:50%;
+  margin:3% auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+.signUpPage i,.signInPage i{
+  background-color: white;
+  padding: 0.7em;
+  font-size: 1.3em;
+  border-radius: 20px 0 0 20px;
+}
+
+.signUpPage input,.signInPage input{
+  width:92%;
+  padding: 1em;
+  border-radius: 0 20px 20px 0;
+  outline:none;
+  border: none;
+  font-size:1em;
+}
+
+.SignUpBtn,.signInBtn,.showBtn{
+  outline:none;
+  background-color: #212D37;
+  color:#F2BF73;
+  border:none;
+  border-radius:10px;
+  text-transform: uppercase;
+  cursor:pointer;
+  padding: 1em;
+}
+.SignUpBtn,.signInBtn{
+  width:20%;
+  margin:3% auto;
+}
+.showBtn{
+  width:20%;
+  margin:0 auto 3%;
+}
+
+.signInBtn{
+  margin: 3% auto 5%;
+}
+
+.showBtn{
+  width:40%;
+  font-size: 1.2em;
+  padding: 0.7em;
+}
+
+.errorMsg{
+  text-align: center;
+  font-weight: bold;
+}
+
+.getFolderName{
+  width:100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.getFolderName input{
+  padding:10px;
+  border:none;
+  outline:none;
+  margin-left:3%;
+  border-radius: 5px;
+  font-size:1.2em;
+}
+
+.folderNameBtn{
+  width: 15%;
+  margin:5% 0 0;
+  outline:none;
+  background-color: #212D37;
+  color:#F2BF73;
+  border:none;
+  border-radius:10px;
+  text-transform: uppercase;
+  padding: 1em;
+  cursor:pointer;
+}
+
+
+.showErrorMsg{
+  margin:3% 0 0;
+  font-size:1.5em;
+}
+
+.signUpPage{
+  text-align:center;
+}
+.signInPage{
+  text-align:center;
+}
+
+.header{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+}
+
+.header section{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+}
+.headerLeftSection{
+  padding:2% 3%;
+}
+
+.headerLeftSection h1{
+  padding-left:0.2em;
+  font-size:2em;
+  color:#cfd5da ;
+  text-shadow: 1px 1px 2px rgb(14, 11, 56);
+  font-size: 2.5em;
+  font-family: 'Roboto', sans-serif;
+}
+.headerLeftSection i{
+  padding-top:0.2em;
+  font-size:2.2em;
+  color:#cfd5da ;
+  text-shadow: 1px 1px 2px rgb(14, 11, 56);
+}
+.headerRightSection{
+  padding:2% 3%;
+  width:50%;
+
+}
+
+.headerRightSection button{
+  padding: 9px 15px ;
+  background-color: #343646;
+  outline: none;
+  cursor: pointer;
+  border:none;
+  border-radius: 5px;
+  color: #d8dfe5;
+  font-size: 1.5em;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:0 3%;
+}
+
+.headerRightSection button i{
+  font-size: 0.9em;
+  margin-right:12%;
+}
+
+.headerRightSection h2{
+  padding:0 8%;
+  font-size:2em;
+  color:#cfd5da ;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 1px 1px 2px rgb(14, 11, 56);
+}
+
+.showEditorDataSection{
+  width:85%;
+  display:flex;
+  flex-wrap: wrap;
+  align-items:center;
+  /* justify-content:space-around; */
+  padding:2%;
+  margin:2% auto;
+}
+
+.editorDetails{
+  width:25%;
+  height:400px;
+  box-shadow:0 0 10px rgba(0,0,0,0.2);
+  background-color:#d5e2ef;
+  border-radius:5px;
+  margin:2% 3%;
+}
+
+.editorSectionImage{
+  width:90%;
+  height:250px;
+  text-align:center;
+  line-height:250px;
+  font-size:3em;
+  margin:5% auto;
+  background-color:#becfe0;
+  border-radius:5px;
+}
+
+.editorDetails h1{
+  padding:0 8%;
+  font-size:2em;
+  color:#03101c ;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 1px 1px 2px rgb(197 195 226);
+  margin-bottom:2%;
+}
+
+.editorDetails section{
+  display:flex;
+  justify-content:flex-end;
+  padding:2%;
+}
+
+.editorDetails section button{
+  padding:8px;
+  border:none;
+  outline:none;
+  border-radius:5px;
+  background-color:#343646;
+  color:#becfe0;
+  font-size:1em;
+  cursor:pointer;
+  margin:0 5%;
+}
+
+.editorPageHeader{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:2%;
+}
+.editorPageLeftSection{
+  width:50%;
+  display:flex;
+
+}
+.editorPageLeftSection h3{
+  font-size:2em;
+  padding:0 3%;
+  color:#03101c ;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 1px 1px 2px rgb(197 195 226);
+}
+
+.editorPageLeftSection i{
+  font-size:2.2em;
+  padding:0 2%;
+  color:#25282b ;
+  margin-top:5px;
+}
+
+.editorPageRightSection{
+  width:50%;
+  display:flex;
+  justify-content:flex-end;
+}
+#editorName{
+  border:none;
+  outline:none;
+  padding:0 15px;
+  border-radius:5px;
+  font-size:0.9em;
+  margin-top:5px;
+}
+
+.saveBtn{
+  background-color: #212D37;
+  color:#F2BF73;
+  border:none;
+  border-radius:5px;
+  text-transform: uppercase;
+  padding: 1em;
+  cursor:pointer;
+  float:right;
+  margin:2.5% 8%;
+  outline:none;
+}
+
+

@@ -1,0 +1,19 @@
+{{page-title "HomePage"}}
+<div class="editorHomePage">
+  <div class="header">
+    <section class='headerLeftSection'>
+      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+      <h1>Editor</h1>
+    </section>
+    <section class='headerRightSection'>
+      <h2>{{this.userName }}</h2>
+      <LinkTo @route="editorPage"><button type='button' class="createBtn"><i class="fa fa-plus" aria-hidden="true"></i> New </button></LinkTo>
+      <button type="button" class="logOutBtn" {{on 'click' this.logoutAccount}}>Log out</button>
+    </section>
+  </div>
+  <div class="showEditorDataSection">
+    {{#each this.model as |data|}}
+        <EditorCard @editorData = {{data}}/>
+    {{/each}}
+  </div>
+</div>

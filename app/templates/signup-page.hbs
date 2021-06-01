@@ -1,0 +1,42 @@
+{{page-title "SignupPage"}}
+<div class='signUpPage'>
+  <h1>Sign Up</h1>
+  <form method="POST" action="http://localhost:8080/textEditorApp/userDetails">
+      <section>
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <Input
+          @type='text'
+          @id="userName"
+          autocomplete='off'
+          @name="name"
+          @value ={{this.name}}
+          placeholder="Name"
+        />
+    </section>
+    <section>
+      <i class="fa fa-envelope" aria-hidden="true"></i>
+      <Input
+        @type='email'
+        @id="email"
+        autocomplete='off'
+        @name="email"
+        @value ={{this.email}}
+        placeholder="email"
+      />
+    </section>
+    <section>
+      <i class="fa fa-unlock" aria-hidden="true"></i>
+      <Input
+        @type='password'
+        @id="password"
+        autocomplete='off'
+        @name="password"
+        @value ={{this.password}}
+        placeholder="password"
+      />
+    </section>
+      <button type="submit" class="SignUpBtn">Create account</button>
+      <h3>Already have an account ? <LinkTo @route="signin-page">Sign in</LinkTo></h3>
+  </form>
+</div>
+

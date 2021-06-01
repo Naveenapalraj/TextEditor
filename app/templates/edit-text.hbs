@@ -1,0 +1,20 @@
+{{page-title "EditText"}}
+<div class = "editorPage">
+  <div class="editorPageHeader">
+    <section class="editorPageLeftSection">
+      <h3>File name: </h3>
+      <Input
+        @type="text"
+        @id ="editorName"
+        autocomplete='off'
+        placeholder="Enter the folder name "
+        @value = {{this.model.headerName}}
+      />
+      <i class="fa fa-folder" aria-hidden="true"></i>
+    </section>
+    <section class="editorPageRightSection">
+      <button type="button" class='saveBtn' {{on 'click' this.saveContent value='target'}} >Save Content</button>
+    </section>
+  </div>
+  <div id="editorjs" {{this.getEditor}}></div>
+</div>
