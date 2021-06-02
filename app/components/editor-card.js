@@ -5,7 +5,7 @@ export default class EditorCardComponent extends Component {
   @service store;
   @action
   deleteData(getId){
-    let deleteData = this.store.peekRecord('texteditor',getId);
+    let deleteData = this.store.peekRecord('document',getId);
     deleteData.destroyRecord();
   }
 }

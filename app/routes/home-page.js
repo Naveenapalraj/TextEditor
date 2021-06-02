@@ -9,9 +9,9 @@ export default class HomePageRoute extends Route {
     this.store.queryRecord('user',{email:useremail}).then((userDetail)=>{
       currentUserId = userDetail.id;
       if(currentUserId != undefined){
-        this.store.queryRecord('texteditor',{id:currentUserId});
+        this.store.queryRecord('document',{id:currentUserId});
       }
     })
-    return this.store.peekAll('texteditor');
+    return this.store.peekAll('document');
   }
 }

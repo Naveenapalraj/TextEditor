@@ -4,5 +4,5 @@ export default class UserModel extends Model {
   @attr('string') name;
   @attr('string') email;
   @attr('boolean') userStatus;
-  @hasMany('texteditor') textEditor;
+  @hasMany('document') textEditor;
 }
