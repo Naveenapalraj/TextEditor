@@ -1,5 +1,6 @@
 import Controller from '@ember/controller';
 import {action} from '@ember/object';
+
 export default class HomePageController extends Controller {
   get userName(){
     let currentUserId;
@@ -11,6 +12,7 @@ export default class HomePageController extends Controller {
       return currentUser.name;
     }
   }
+
   @action
   logoutAccount(){
     let userId;

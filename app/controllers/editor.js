@@ -54,18 +54,19 @@ export default class EditorController extends Controller {
       const self = this;
       this.editor.save().then((data) =>{
         if(data.blocks.length !=0){
-          self.model.name = fileName;
-          self.model.bodyContent = data.blocks;
+          let createDocument = this.store.createRecord('document');
+          createDocument.name = fileName;
+          createDocument.bodyContent = data.blocks;
           let user = self.store.peekAll('user');
           user.forEach((ele)=>{
               if(ele.userStatus == true){
                 currentUser = ele;
               }
           })
-          self.model.user = currentUser;
-          self.model.save();
+          createDocument.user = currentUser;
+          createDocument.save();
           this.editor.clear();
-          self.transitionToRoute('homePage');
+          this.transitionToRoute('homePage');
         }
       }).catch((error) => {
         console.log('Saving failed: ', error)
