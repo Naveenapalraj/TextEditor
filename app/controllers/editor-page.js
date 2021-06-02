@@ -47,15 +47,15 @@ export default class EditorPageController extends Controller {
 
   @action
   saveContent(value){
-    const folderName = this.folderName;
+    const fileName = this.fileName;
     let currentUser;
-    if(folderName != "" && folderName != undefined){
+    if(fileName != "" && fileName != undefined){
       value.target.parentNode.parentNode.firstElementChild.firstElementChild.nextElementSibling.style.border ="none";
       const self = this;
       this.editor.save().then((data) =>{
         if(data.blocks.length !=0){
-          self.model.headerName = folderName;
-          self.model.headerBody = data.blocks;
+          self.model.name = fileName;
+          self.model.bodyContent = data.blocks;
           let user = self.store.peekAll('user');
           user.forEach((ele)=>{
               if(ele.userStatus == true){
@@ -70,7 +70,7 @@ export default class EditorPageController extends Controller {
       }).catch((error) => {
         console.log('Saving failed: ', error)
       });
-      this.set("folderName","");
+      this.set("fileName","");
     }
     else{
       value.target.parentNode.parentNode.firstElementChild.firstElementChild.nextElementSibling.style.border ="2px solid #cf0000";

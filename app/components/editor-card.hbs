@@ -2,7 +2,7 @@
   <div class="editorSectionImage">
     <i class="fa fa-file" aria-hidden="true"></i>
   </div>
-  <h1>{{@editorData.headerName}}</h1>
+  <h1>{{@editorData.name}}</h1>
   <section>
     <LinkTo @route="edit-text" @model = {{@editorData.id}}><button type="button" class='editBtn'>Edit</button></LinkTo>
     <button type="button" class='deleteBtn' {{on 'click' (fn this.deleteData @editorData.id)}}>Delete</button>
