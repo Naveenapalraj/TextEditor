@@ -4,7 +4,7 @@
   </div>
   <h1>{{@editorData.name}}</h1>
   <section>
-    <LinkTo @route="edit-text" @model = {{@editorData.id}}><button type="button" class='editBtn'>Edit</button></LinkTo>
+    <LinkTo @route="editDocument" @model = {{@editorData.id}}><button type="button" class='editBtn'>Edit</button></LinkTo>
     <button type="button" class='deleteBtn' {{on 'click' (fn this.deleteData @editorData.id)}}>Delete</button>
   </section>
 </div>

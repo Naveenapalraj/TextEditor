@@ -7,7 +7,7 @@
     </section>
     <section class='headerRightSection'>
       <h2>{{this.userName }}</h2>
-      <LinkTo @route="editorPage"><button type='button' class="createBtn"><i class="fa fa-plus" aria-hidden="true"></i> New </button></LinkTo>
+      <LinkTo @route="editor"><button type='button' class="createBtn"><i class="fa fa-plus" aria-hidden="true"></i> New </button></LinkTo>
       <button type="button" class="logOutBtn" {{on 'click' this.logoutAccount}}>Log out</button>
     </section>
   </div>

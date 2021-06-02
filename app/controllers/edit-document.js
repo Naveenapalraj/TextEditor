@@ -6,7 +6,7 @@ import Embed from '@editorjs/embed';
 import {action} from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 
-export default class EditTextController extends Controller {
+export default class EditDocumentController extends Controller {
   @tracked editor;
   get getEditor(){
     this.editor = new EditorJS({

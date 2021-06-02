@@ -7,7 +7,7 @@ import Embed from '@editorjs/embed';
 import {action} from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 
-export default class EditorPageController extends Controller {
+export default class EditorController extends Controller {
   @tracked editor;
 
   get getEditor(){

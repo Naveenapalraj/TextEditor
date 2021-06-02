@@ -7,9 +7,9 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function () {
-  this.route('editorPage');
   this.route('signup-page');
   this.route('signin-page');
   this.route('homePage');
-  this.route('edit-text',{ path: '/edit-text/:id' });
+  this.route('editor');
+  this.route('editDocument',{ path: '/open/:id' });
 });
